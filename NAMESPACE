@@ -1,0 +1,30 @@
+useDynLib(pfda)
+
+importFrom("utils","head","tail")
+importFrom("graphics","plot")
+importFrom("stats", "logLik", "residuals","predict")
+importFrom("orthogonalsplinebasis","SplineBasis","evaluate","plot")
+importFrom("mvbutils","localfuncs")
+importFrom("graphics","persp")
+
+export(		
+			"pfda",
+			"pfdaControl"
+			)
+S3method(AIC,pfda.dual.bc)
+S3method(AIC,pfda.dual.cc)
+S3method(AIC,pfda.single.c)
+S3method(AIC,pfda.single.b)
+S3method(logLik,pfda.additive)
+S3method(logLik,pfda.dual.cc)
+S3method(plot,pfda.additive)
+S3method(plot,pfda.single.c)
+#S3method(plot,pfda.single.b)
+#S3method(plot,pfda.dual.cc)
+#S3method(plot,pfda.dual.bc)
+S3method(print,pfda.additive)
+S3method(print,pfda.dual.bc)
+S3method(print,pfda.dual.cc)
+S3method(print,pfda.single.b)
+S3method(print,pfda.single.c)
+S3method(persp,pfda.additive)
